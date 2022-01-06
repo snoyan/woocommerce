@@ -46,7 +46,7 @@ class WooCartItem {
   WooCartItem(
       {this.key,
       this.id,
-      this.quantity,
+      this.quantity=0,
       this.name,
       this.sku,
       this.permalink,
