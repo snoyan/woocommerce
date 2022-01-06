@@ -2,24 +2,18 @@ import 'package:flutter/foundation.dart';
 
 /*
  * BSD 3-Clause License
-
     Copyright (c) 2020, RAY OKAAH - MailTo: ray@flutterengineer.com, Twitter: Rayscode
     All rights reserved.
-
     Redistribution and use in source and binary forms, with or without
     modification, are permitted provided that the following conditions are met:
-
     1. Redistributions of source code must retain the above copyright notice, this
     list of conditions and the following disclaimer.
-
     2. Redistributions in binary form must reproduce the above copyright notice,
     this list of conditions and the following disclaimer in the documentation
     and/or other materials provided with the distribution.
-
     3. Neither the name of the copyright holder nor the names of its
     contributors may be used to endorse or promote products derived from
     this software without specific prior written permission.
-
     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
     AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
     IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
@@ -30,7 +24,6 @@ import 'package:flutter/foundation.dart';
     CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
     OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
  */
 
 import 'product_category.dart';
@@ -42,6 +35,8 @@ class WooProduct {
   final String? permalink;
   final String? type;
   final String? status;
+  final String? dateOnSaleTo,
+  final String? dateOnSaleFrom,
   final bool? featured;
   final String? catalogVisibility;
   final String? description;
@@ -101,6 +96,8 @@ class WooProduct {
       this.permalink,
       this.type,
       this.status,
+      this.dateOnSaleFrom,
+      this.dateOnSaleTo,
       this.featured,
       this.catalogVisibility,
       this.description,
@@ -160,6 +157,8 @@ class WooProduct {
         permalink = json['permalink'],
         type = json['type'],
         status = json['status'],
+        dateOnSaleFrom = json['date_on_sale_from'],
+        dateOnSaleTo = json['date_on_sale_to'],
         featured = json['featured'],
         catalogVisibility = json['catalog_visibility'],
         description = json['description'],
@@ -318,14 +317,11 @@ class WooProductImage {
 ///  final int id;
 /// final String name;
 ///   final String slug;
-
 ///   Category(this.id, this.name, this.slug);
-
 ///   Category.fromJson(Map<String, dynamic> json)
 ///       : id = json['id'],
 ///         name = json['name'],
 ///         slug = json['slug'];
-
 ///   Map<String, dynamic> toJson() => {
 ///         'id': id,
 ///         'name': name,
@@ -334,7 +330,6 @@ class WooProductImage {
 ///   @override toString() => toJson().toString();
 /// }
 ///
-
 class WooProductDimension {
   final String? length;
   final String? width;
