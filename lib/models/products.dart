@@ -35,8 +35,8 @@ class WooProduct {
   final String? permalink;
   final String? type;
   final String? status;
-  final String? dateOnSaleTo,
-  final String? dateOnSaleFrom,
+  final String? dateOnSaleTo;
+  final String? dateOnSaleFrom;
   final bool? featured;
   final String? catalogVisibility;
   final String? description;
