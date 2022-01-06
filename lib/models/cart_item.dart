@@ -34,7 +34,7 @@
 class WooCartItem {
   String? key;
   int? id;
-  int? quantity;
+  int quantity=0;
   String? name;
   String? sku;
   String? permalink;
