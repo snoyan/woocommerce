@@ -34,7 +34,7 @@
 class WooCartItem {
   String? key;
   int? id;
-  int quantity=0;
+  int? quantity;
   String? name;
   String? sku;
   String? permalink;
@@ -46,7 +46,7 @@ class WooCartItem {
   WooCartItem(
       {this.key,
       this.id,
-      this.quantity=0,
+      this.quantity,
       this.name,
       this.sku,
       this.permalink,
